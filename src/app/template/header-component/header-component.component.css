@@ -1,0 +1,47 @@
+/* clase ".nav" para definir que los links no esten pegados a los 
+bordes de la pagina */
+.nav{
+    text-decoration: none;
+    margin: 5px 10px 5px 10px;
+    padding: 5px 10px 5px 10px;
+	
+}
+
+/* clase ".nav a" para definir el formato de separación de cada link */
+.nav a{
+    padding: 5px;
+	/* Cambiar color de URL */
+	color: azure;
+}
+
+/* Definir separacion entre loss dos botones (INICIAR SESION, REGISTRO) */
+.margen{
+    margin: 5px;
+}
+
+/* Define el encabezado de la pagina */
+header{
+	/* "padding" define el margen del elemento que esta dentro de la 
+	tabla de abajo hacia arriba */ 
+	padding: 50px;
+	/* "background-color" color del fondo del texto */
+	background-color: #000000;
+	/* "text-align" define la posicion en la que se situa el texto
+	en la tabla */
+	text-align: center;
+	
+}
+
+/* Contenedor principal */
+.contenedor{
+	justify-content: space-between;
+
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+
+	flex-direction: row;
+    
+	/*align-items: stretch;*/
+
+	height: 100%;
+}

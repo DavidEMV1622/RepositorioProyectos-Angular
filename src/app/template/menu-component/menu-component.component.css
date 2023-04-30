@@ -1,0 +1,82 @@
+/* clase ".navTwo" para definir que los links no esten pegados a los 
+bordes de la pagina */
+
+.navTwo{
+    text-decoration: none;
+    margin: 10px 5px 10px 5px;
+    padding: 10px 5px 10px 5px;
+}
+
+/* clase ".navTwo a" y ".navThree a" para definir el formato de separación de cada link */
+.navTwo a{
+    padding: 10px;
+	/* Cambiar color de URL */
+	color: azure;
+}
+
+/* -------------------------- Define La pagina completa -------------------------- */
+*{
+	margin: 0;
+	padding: 0;
+    
+}
+
+html,body{
+	/* "background" color del fondo */
+	background-color: #15181C;
+	/* "font-family" define el tipo de letra que va a manejar el cuerpo de la pagina */
+	font-family: Arial;
+
+	display: flex;
+
+	flex-direction: column;
+	height: 100%;
+
+}
+
+.campoMenu{
+    /* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+
+	flex-direction: column;
+
+	/*align-items: stretch;*/
+
+	height: 100%;
+}
+
+/* "contenedor" clase para usar los Flexbox */
+.contenedor{
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+
+	flex-direction: row;
+    
+	/*align-items: stretch;*/
+
+	height: 100%;
+}
+
+.campoUno{
+	/* "border" agrega un borde a la tabla */
+	border: 3px solid #000000;
+	/* "width" define el anho de la tabla */
+	width: 250px;
+	/* "text-align" define la posicion en la que se situa el texto
+	en la tabla */
+	text-align: center;
+	/* "font-size" tamaño del texto */
+	font-size: 20px;
+}
+
+.campoDos{
+	/* "width" define el ancho de la tabla */
+	width: 200px;
+	/* "text-align" define la posicion en la que se situa el texto
+	en la tabla */
+	text-align: center;
+	/* "padding" define el margen del elemento que esta dentro de la 
+	tabla de abajo hacia arriba */ 
+	padding: 50px;
+	
+}

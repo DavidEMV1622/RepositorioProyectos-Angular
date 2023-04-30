@@ -1,0 +1,45 @@
+.navThree{
+    text-decoration: none;
+    margin: 10px 5px 10px 5px;
+    padding: 10px 5px 10px 5px;
+	/* Cambiar color de URL */
+	color: azure;
+
+	/* Definir la posicion del texto */
+	justify-content: flex-start;
+}
+
+/* Define el footer de la pagina */
+footer{
+	/* "padding" define el margen del elemento que esta dentro de la 
+	tabla de abajo hacia arriba */ 
+	padding: 50px;
+	/* "background-color" color del fondo del texto */
+	background-color: #000000;
+}
+
+/* Contenedor principal */
+.contenedor{
+	justify-content: space-between;
+
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+
+	flex-direction: row;
+    
+	/*align-items: stretch;*/
+
+	height: 100%;
+}
+
+/* Contenedor para las imagenes */
+.contenedorImagen{
+	justify-content: space-between;
+
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+
+	flex-direction: row;
+
+	height: 100%;
+}

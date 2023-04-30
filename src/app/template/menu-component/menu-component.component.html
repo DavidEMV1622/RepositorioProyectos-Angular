@@ -1,0 +1,41 @@
+<app-header-component></app-header-component>
+
+
+<body>
+
+	
+	<div class = "contenedor">
+
+		<div class="campoUno">
+            
+            <div class="campoMenu navTwo">
+                <!-- Definir cada link para los formularios -->
+                <a href="PersonasRuta">Personas</a>
+                <a href="ListaPersonasRuta">Lista de Personas</a>
+                <a href="ConcesionariosRuta">Concesionarios</a>
+                <a href="ListaConcesionariosRuta">Lista de Concesionarios</a>
+                <a href="AutomovilesRuta">Automoviles</a>
+                <a href="ListaAutomovilesRuta">Lista de Automoviles</a>
+                <a href="VentaRuta">Ventas</a>
+                <a href="ListaVentasRuta">Lista de Ventas</a>
+                <a href="RolRuta">Roles</a>
+                <a href="ListaRolesRuta">Lista de Roles</a>
+            </div>
+
+        </div>
+
+		<!-- "flex-grow" define la prioridad de crecimiento que tiene 
+            el elemento para que abarque todo lo ancho de la pantalla -->
+		<div class="campoDos" style="flex-grow: 1;">
+
+            <!-- Llamada de las rutas -->
+            <router-outlet></router-outlet>
+
+        </div>
+
+	</div>
+
+</body>
+
+
+<app-footer-component></app-footer-component>

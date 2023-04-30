@@ -1,0 +1,39 @@
+<div class="container">
+    <h3 class="text-bg-dark">Lista Concesionarios</h3>
+    <div>
+        <table class="table table-striped table-dark table-bordered">
+            <!--7.5) Encabezado de la tabla-->
+            <thead>
+                <th>id_concesionario</th>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>Acciones</th>
+            </thead>
+
+            <!--7.6) Cuerpo de la tabla-->
+            <tbody>
+                <!--7.7) "*ngFor" recorre la fila de cada de dato
+                crea una variable "concesionario" (singular) para buscarla en la "listConcesionarios"-->
+                <tr *ngFor="let concesionario of listConcesionarios">
+                    <td>{{concesionario.id_concesionario}}</td>
+                    <td>{{concesionario.nombres}}</td>
+                    <td>{{concesionario.direcciones}}</td>
+                    <td>{{concesionario.correos}}</td>
+                    <td>{{concesionario.telefonos}}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary margen">Editar</button>
+                        <button type="button" class="btn btn-danger margen">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Condición si hay (muestre los datos) o no hay ("No hay Registros") datos -->
+        <div *ngIf = "show" class="p-3 mb-2 bg-danger text-white">
+            <h5>No hay Registros</h5>
+        </div>
+    </div>
+
+</div>
