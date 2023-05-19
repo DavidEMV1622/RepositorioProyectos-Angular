@@ -1,11 +1,29 @@
 <div class="container">
-    <div>
-        <form id="formulario_Registro" method="POST">
-            <div>
-                <app-titulo-registrar-rol></app-titulo-registrar-rol>
-                <app-menu-rol></app-menu-rol>
-                <app-boton-registrar-rol></app-boton-registrar-rol>
+
+    <form id="formulario_Registro" method="POST" class="containerForm">
+
+        <div class="colorLabel">
+
+            <!-- Titulo "Registrar Personas" -->
+            <div><h3>{{title}}</h3></div>
+
+            <div style="text-align: start;">
+                <!-- PEDIR NOMBRE -->
+                <div class= "row">
+                    <label for = "txtNombre">Nombre*</label>
+                    <input type="text" id="txtNombre" name="txtNombre" class = "form-control" maxlength= "50" minlength= "3" required>
+                </div>
+            </div>         
+            <hr>
+
+            <!-- BOTON REGISTRAR -->
+            <div class="definirCentro">
+                <input type="submit" id="btnRegistrar" name="btnRegistrar" 
+                value="Registrar" class="btn btn-dark margen">  
             </div>
-        </form>
-    </div>
+            
+        </div>
+
+    </form>
+
 </div>

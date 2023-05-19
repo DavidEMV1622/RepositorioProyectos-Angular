@@ -1,19 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FormPersonaComponent } from './persona/form-persona/form-persona.component';
-import { MenuPersonaComponent } from './persona/menu-persona/menu-persona.component';
-import { TituloRegistrarPersonaComponent } from './persona/titulo-registrar-persona/titulo-registrar-persona.component';
-import { TituloActualizarPersonaComponent } from './persona/titulo-actualizar-persona/titulo-actualizar-persona.component';
-import { BotonRegistrarPersonaComponent } from './persona/boton-registrar-persona/boton-registrar-persona.component';
 import { FormConcesionarioComponent } from './concesionario/form-concesionario/form-concesionario.component';
 import { TituloRegistrarConcesionarioComponent } from './concesionario/titulo-registrar-concesionario/titulo-registrar-concesionario.component';
 import { BotonRegistrarConcesionarioComponent } from './concesionario/boton-registrar-concesionario/boton-registrar-concesionario.component';
 import { MenuConcesionarioComponent } from './concesionario/menu-concesionario/menu-concesionario.component';
-import { MenuAutomovilComponent } from './automovil/menu-automovil/menu-automovil.component';
-import { TituloRegistrarAutomovilComponent } from './automovil/titulo-registrar-automovil/titulo-registrar-automovil.component';
-import { BotonRegistrarAutomovilComponent } from './automovil/boton-registrar-automovil/boton-registrar-automovil.component';
 import { FormAutomovilComponent } from './automovil/form-automovil/form-automovil.component';
 import { FormVentaComponent } from './venta/form-venta/form-venta.component';
 import { MenuVentaComponent } from './venta/menu-venta/menu-venta.component';
@@ -37,22 +31,21 @@ import { ApiVentasService } from './service/api-ventas.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponentComponent } from './template/header-component/header-component.component';
 import { FooterComponentComponent } from './template/footer-component/footer-component.component';
+import { InicioComponentComponent } from './dashboard/inicio-component/inicio-component.component';
+import { PresentacionComponentComponent } from './dashboard/presentacion-component/presentacion-component.component';
+import { LoginComponentComponent } from './dashboard/login-component/login-component.component';
+import { RecuperarCuentaComponentComponent } from './dashboard/recuperar-cuenta-component/recuperar-cuenta-component.component';
+import { PlanesComponentComponent } from './dashboard/planes-component/planes-component.component';
+import { ContactoComponentComponent } from './dashboard/contacto-component/contacto-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormPersonaComponent,
-    MenuPersonaComponent,
-    TituloRegistrarPersonaComponent,
-    TituloActualizarPersonaComponent,
-    BotonRegistrarPersonaComponent,
     FormConcesionarioComponent,
     TituloRegistrarConcesionarioComponent,
     BotonRegistrarConcesionarioComponent,
     MenuConcesionarioComponent,
-    MenuAutomovilComponent,
-    TituloRegistrarAutomovilComponent,
-    BotonRegistrarAutomovilComponent,
     FormAutomovilComponent,
     FormVentaComponent,
     MenuVentaComponent,
@@ -69,12 +62,20 @@ import { FooterComponentComponent } from './template/footer-component/footer-com
     VentaComponentComponent,
     RolComponentComponent,
     HeaderComponentComponent,
-    FooterComponentComponent
+    FooterComponentComponent,
+    InicioComponentComponent,
+    PresentacionComponentComponent,
+    LoginComponentComponent,
+    RecuperarCuentaComponentComponent,
+    PlanesComponentComponent,
+    ContactoComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [ApiPersonasService, ApiConcesionariosService, ApiAutomovilesService,
     ApiVentasService],

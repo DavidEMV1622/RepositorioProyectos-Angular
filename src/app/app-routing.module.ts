@@ -14,27 +14,51 @@ import { AutomovilComponentComponent } from './automovil/automovil-component/aut
 import { VentaComponentComponent } from './venta/venta-component/venta-component.component';
 import { RolComponentComponent } from './rol/rol-component/rol-component.component';
 
+import { MenuComponentComponent } from './template/menu-component/menu-component.component';
+import { LoginComponentComponent } from './dashboard/login-component/login-component.component';
+import { RecuperarCuentaComponentComponent } from './dashboard/recuperar-cuenta-component/recuperar-cuenta-component.component';
+import { PlanesComponentComponent } from './dashboard/planes-component/planes-component.component';
+import { ContactoComponentComponent } from './dashboard/contacto-component/contacto-component.component';
+import { PresentacionComponentComponent } from './dashboard/presentacion-component/presentacion-component.component';
+import { InicioComponentComponent } from './dashboard/inicio-component/inicio-component.component';
+
 // Creacion del objeto con arreglos (componente)
 const routes: Routes = [
   // Definir las rutas de los formularios
-  { path: 'PersonasRuta', component: FormPersonaComponent },
-  { path: 'ConcesionariosRuta', component: FormConcesionarioComponent },
-  { path: 'AutomovilesRuta', component: FormAutomovilComponent },
-  { path: 'VentaRuta', component: FormVentaComponent },
-  { path: 'RolRuta', component: FormRolComponent },
+
+
 
   // Definir las rutas de las listas de datos
-  { path: 'ListaPersonasRuta', component: PersonaComponentComponent },
-  { path: 'ListaConcesionariosRuta', component: ConcesionarioComponentComponent },
-  { path: 'ListaAutomovilesRuta', component: AutomovilComponentComponent },
-  { path: 'ListaVentasRuta', component: VentaComponentComponent },
-  { path: 'ListaRolesRuta', component: RolComponentComponent }
-  
+
+  // Rutas menu
+  { path: 'InicioRuta', component: InicioComponentComponent },
+  {
+    path: 'dashboard',
+    component: MenuComponentComponent,
+    children: [
+      { path: 'PersonasRuta', component: FormPersonaComponent },
+      { path: 'listaPersonas', component: PersonaComponentComponent },
+      { path: 'ConcesionariosRuta', component: FormConcesionarioComponent },
+      { path: 'listaConcesionarios', component: ConcesionarioComponentComponent},
+      { path: 'AutomovilesRuta', component: FormAutomovilComponent },
+      { path: 'listaAutomoviles', component: AutomovilComponentComponent },
+      { path: 'VentaRuta', component: FormVentaComponent },
+      { path: 'listaVentas', component: VentaComponentComponent },
+      { path: 'RolRuta', component: FormRolComponent },
+      { path: 'listaRoles', component: RolComponentComponent },
+
+
+    ],
+  },
+  { path: 'LoginRuta', component: LoginComponentComponent },
+  { path: 'RecuperarCuentaRuta', component: RecuperarCuentaComponentComponent },
+  { path: 'PlanesRuta', component: PlanesComponentComponent },
+  { path: 'ContactoRuta', component: ContactoComponentComponent },
 ];
 
 // Usar modulo para importar las rutas
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

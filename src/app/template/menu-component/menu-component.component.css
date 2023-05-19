@@ -7,11 +7,20 @@ bordes de la pagina */
     padding: 10px 5px 10px 5px;
 }
 
-/* clase ".navTwo a" y ".navThree a" para definir el formato de separación de cada link */
+/* clase ".navTwo a" para definir el formato de separación de cada link */
 .navTwo a{
     padding: 10px;
 	/* Cambiar color de URL */
 	color: azure;
+}
+
+/* "hover" animar cuando coloquemos el cursor sobre el link*/
+.navTwo a:hover {
+	font-family: Arial;
+	font-size: 21px;
+	background-color: #EEFB03;
+	color: #000000;
+	border-radius: 20px;
 }
 
 /* -------------------------- Define La pagina completa -------------------------- */

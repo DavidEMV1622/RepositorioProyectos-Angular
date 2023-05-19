@@ -1,0 +1,178 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Contenedor principal */
+.container{
+	
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	width: 100vw;
+	height: 90vh;
+
+    background-color: #000000;
+}
+
+/* Contenedor del titulo principal */
+.containerTitulo{
+	
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    
+	width: 27vw;
+	height: 20vh;
+
+	/* "background-color" color del fondo del texto */
+	background-color: #aaff7c;
+    /* Cambiar color de texto */
+	color: azure;
+	/* "text-align" define la posicion en la que se situa el texto */
+	text-align: center;
+}
+
+/* Contenedor Acomodar planes */
+.containerAcomodarPlanes{
+	
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+    flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Contenedor del primer plan */
+.containerPlanOne{
+	
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+    flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+    
+	width: 27vw;
+	height: 60vh;
+
+	/* "background-color" color del fondo del texto */
+	background-color: #f58181;
+    /* Cambiar color de texto */
+	color: azure;
+	/* "text-align" define la posicion en la que se situa el texto */
+	text-align: start;
+}
+
+/* Contenedor del segundo plan */
+.containerPlanTwo{
+	
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+    flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+    
+	width: 27vw;
+	height: 60vh;
+
+	/* "background-color" color del fondo del texto */
+	background-color: #b62496;
+    /* Cambiar color de texto */
+	color: azure;
+	/* "text-align" define la posicion en la que se situa el texto */
+	text-align: start;
+}
+
+/* Contenedor del tercer plan */
+.containerPlanThree{
+	
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+    flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+    
+	width: 27vw;
+	height: 60vh;
+
+	/* "background-color" color del fondo del texto */
+	background-color: #81cbf5;
+    /* Cambiar color de texto */
+	color: azure;
+	/* "text-align" define la posicion en la que se situa el texto */
+	text-align: start;
+}
+
+/* Definir posicion de cada imagen */
+.imagenPlanes{
+	display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 27vw;
+	height: 10vh;
+
+	background-color: #ff1010;
+}
+
+.tituloTexto{
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+/* Definir posicion del boton uno*/
+.botonPosicionOne{
+	display: flex;
+    flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	width: 27vw;
+	height: 10vh;
+	/*
+	height: 28vh;
+	*/
+
+	background-color: #2010ff;
+}
+
+/* Definir tamaño y diseño de los botones */
+button {
+	font-family: Arial;
+	font-size: 16px;
+	background-color: #1f1f1f;
+	color: azure;
+	border-radius: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+/* "hover" animar cuando coloquemos el cursor sobre el boton*/
+button:hover {
+	font-family: Arial;
+	font-size: 16px;
+	background-color: #EEFB03;
+	color: #000000;
+	border-radius: 20px;
+}
+
+/* Cambiar colores al texto */
+h4 {
+	color: #EEFB03;
+}
+
+p, ul {
+	color: #A6A6A6;
+}

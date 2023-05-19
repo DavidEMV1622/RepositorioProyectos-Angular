@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-rol.component.css']
 })
 export class FormRolComponent {
-
+  title: string= "Registrar rol"
 }

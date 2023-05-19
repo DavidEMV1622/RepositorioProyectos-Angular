@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./form-venta.component.css']
 })
 export class FormVentaComponent {
-
+  title: string= "Registrar venta"
 }

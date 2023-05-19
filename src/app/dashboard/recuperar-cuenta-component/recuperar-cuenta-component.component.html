@@ -1,0 +1,33 @@
+<div class="container">
+
+    <form class="containerForm">
+
+        <div>
+
+            <!-- Titulo "Registrar Personas" -->
+            <div><h3>{{title}}</h3></div>
+
+            <img src="./assets/imagenes/recuperarCuenta/Correo.png" width="150px">  
+
+            <div style="text-align: start;">
+                <!-- PEDIR "Correo electronico" -->
+                <div class= "row form-group">
+                    <label for = "txtNombre">Ingrese su correo electronico*</label>
+                    <input formControlName="nombresUsuarios" type="text" id="txtNombreUsuario" class = "form-control" 
+                    maxlength= "50" minlength= "3" required>
+                </div>
+
+            </div>
+            
+            <hr>
+            <!-- BOTON ENVIAR -->
+            <div>
+                <input type="submit" id="btnRegistrar" name="btnRegistrar" 
+                value="Enviar" class="btn btn-dark margen">  
+            </div>
+
+        </div>
+    
+    </form>
+
+</div>

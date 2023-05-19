@@ -1,0 +1,52 @@
+<div class="container">
+
+    <form class="containerForm">
+
+        <div>
+
+            <!-- Titulo "Registrar Personas" -->
+            <div class="definirCentro"><h3>{{title}}</h3></div>
+
+            <img src="./assets/imagenes/login/Perfil.png" width="150px">  
+
+            <div style="text-align: start;">
+                <!-- PEDIR NOMBRE o USUARIO -->
+                <div class= "row form-group">
+                    <label for = "txtNombre">Nombre/Usuario*</label>
+                    <input formControlName="nombresUsuarios" type="text" id="txtNombreUsuario" class = "form-control" 
+                    maxlength= "50" minlength= "3" required>
+                </div>
+
+                <!-- PEDIR CONTRASEÑA -->
+                <div class = "row form-group">
+                    <label for = "txtContrasenia">Contraseña*</label>
+                    <input formControlName="contrasenias" type="text" id="txtContrasenia" class = "form-control" maxlength= "50" minlength= "5" required>
+                </div>
+
+                <!-- CHECKBOX DE RECORDAR DATOS -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckRecordingDate">
+                    <label class="form-check-label" for="flexCheckRecordingDate">
+                        Recordar Datos
+                    </label>
+                </div>
+
+                <!-- Link de "Olvide mi contraseña" y "No tienes cuenta" -->
+                <nav>
+                    <a href="RecuperarCuentaRuta">¿Olvido su contraseña?</a>
+                    <a href="PersonasRuta">¿No tienes cuenta?, Registresse aqui</a>
+                </nav>
+            </div>
+            
+            <hr>
+            <!-- BOTON LOGIN -->
+            <div>
+                <input type="submit" id="btnRegistrar" name="btnRegistrar" 
+                value="Login" class="btn btn-dark margen">  
+            </div>
+
+        </div>
+    
+    </form>
+
+</div>

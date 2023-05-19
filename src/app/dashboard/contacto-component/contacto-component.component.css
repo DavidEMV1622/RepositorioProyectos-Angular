@@ -1,0 +1,133 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Contenedor principal */
+.container{
+
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	width: 100vw;
+	height: 90vh;
+
+    background-color: #000000;
+}
+
+/* Contenedor del titulo principal */
+.containerTitulo{
+
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 42vw;
+	height: 20vh;
+
+	/* "background-color" color del fondo del texto */
+	background-color: #aaff7c;
+    /* Cambiar color de texto */
+	color: azure;
+	/* "text-align" define la posicion en la que se situa el texto */
+	text-align: center;
+}
+
+/* Contenedor Acomodar planes */
+.containerAcomodarContactos{
+
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+    flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Contenedor del contacto */
+.containerContactoOne{
+
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+  flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	width: 27vw;
+	height: 60vh;
+
+	/* "background-color" color del fondo del texto */
+	background-color: #f58181;
+    /* Cambiar color de texto */
+	color: azure;
+	/* "text-align" define la posicion en la que se situa el texto */
+	text-align: start;
+}
+
+/* Contenedor del los inputs */
+.containerContactoTwo{
+
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+    flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	width: 27vw;
+	height: 60vh;
+
+	/* "background-color" color del fondo del texto */
+	background-color: #ebf581;
+    /* Cambiar color de texto */
+	color: azure;
+	/* "text-align" define la posicion en la que se situa el texto */
+	text-align: start;
+}
+
+/* Contenedor para las imagenes */
+.contenedorImagen{
+	justify-content: flex-start;
+
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+
+	flex-direction: row;
+}
+
+button {
+	font-family: Arial;
+	font-size: 16px;
+	background-color: #1f1f1f;
+	color: azure;
+	border-radius: 20px;
+
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+/* "hover" animar cuando coloquemos el cursor sobre el boton*/
+button:hover {
+	font-family: Arial;
+	font-size: 16px;
+	background-color: #EEFB03;
+	color: #000000;
+	border-radius: 20px;
+}
+
+.textoColor, nav a {
+	color: #EEFB03;
+}
+
+
+.separacion {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

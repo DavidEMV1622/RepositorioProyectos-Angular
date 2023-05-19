@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+	padding: 0;
+  /* "background" color del fondo */
+	background-color: #15181C;
+	/* "font-family" define el tipo de letra que va a manejar el cuerpo de la pagina */
+	font-family: Arial;
+}
+
+/* Contenedor principal */
+.container{
+
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 80vh;
+}
+
+.containerTexto {
+	width: 50%;
+	height: 100%;
+
+
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #000000;
+}
+.img-container{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img{
+	width: 100%;
+  height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.colorLabel{
+  /* Cambiar color de texto */
+	color: azure;
+	/* "text-align" define la posicion en la que se situa el texto */
+	text-align: left;
+  /* "font-size" tamaño del texto */
+	font-size: 20px;
+}
+
+h2 {
+	text-align: center;
+}

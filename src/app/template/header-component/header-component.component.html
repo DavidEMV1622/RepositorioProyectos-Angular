@@ -1,36 +1,44 @@
 <!-- Encabezado de la pagina -->
 <header>
 	<div class="contenedor">
-        <div>
-            <img src="./imagenes/header/encabezado.jpg">          
+
+        <div class="img">
+            <img src="./assets/imagenes/header/encabezado.jpg" width="150px">
         </div>
-    
-        <div>
+
+        <div class="container-nav">
             <!-- elemento "nav" para los links a navegar -->
             <!-- clase "nav" para definir el formato de separación de cada link -->
             <nav class="nav">
-        
-                <!-- Definir cada link para los formularios -->
-                <a href="#">INICIO</a>
-                <a href="#">SERVICIOS</a>
-                <a href="#">PLANES</a>
-                <a href="#">CONTACTO</a>
-            
+
+                <div class="vinculo">
+                    <!-- Definir cada link para los formularios -->
+                    <a href="InicioRuta">INICIO</a>
+                    <a href="dashboard">SERVICIOS</a>
+                    <a href="PlanesRuta">PLANES</a>
+                    <a href="ContactoRuta">CONTACTO</a>
+                </div>
+
             </nav>
         </div>
-    
-        <div>
+
+        <div class="logeo">
             <!-- elemento "nav" para los links a navegar -->
             <!-- clase "nav" para definir el formato de separación de cada link -->
             <nav class="nav">
-        
-                <!-- Definir cada link para los formularios -->
-                <button type="button" class="btn btn-dark margen">INICIAR SESION</button>
-                <button type="button" class="btn btn-dark margen">REGISTRO</button>
-            
+
+                <!-- Definir cada link para los formularios por los botones -->
+                <a href="LoginRuta">
+                    <button type="button" class="btn margen">INICIAR SESION</button>
+                </a>
+                <a href="PersonasRuta">
+                    <button type="button" class="btn margen">REGISTRO</button>
+                </a>
             </nav>
         </div>
-    </div>	
+    </div>
+
+    
 
 
 </header>

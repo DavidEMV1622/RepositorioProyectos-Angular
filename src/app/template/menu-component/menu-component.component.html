@@ -1,41 +1,34 @@
-<app-header-component></app-header-component>
-
-
 <body>
 
-	
 	<div class = "contenedor">
 
 		<div class="campoUno">
-            
+
             <div class="campoMenu navTwo">
                 <!-- Definir cada link para los formularios -->
-                <a href="PersonasRuta">Personas</a>
-                <a href="ListaPersonasRuta">Lista de Personas</a>
-                <a href="ConcesionariosRuta">Concesionarios</a>
-                <a href="ListaConcesionariosRuta">Lista de Concesionarios</a>
-                <a href="AutomovilesRuta">Automoviles</a>
-                <a href="ListaAutomovilesRuta">Lista de Automoviles</a>
-                <a href="VentaRuta">Ventas</a>
-                <a href="ListaVentasRuta">Lista de Ventas</a>
-                <a href="RolRuta">Roles</a>
-                <a href="ListaRolesRuta">Lista de Roles</a>
+                <a [routerLink]="['/dashboard/PersonasRuta']">Personas</a>
+                <a [routerLink]="['/dashboard/listaPersonas']">Lista de Personas</a>
+                <a [routerLink]="['/dashboard/ConcesionariosRuta']">Concesionarios</a>
+                <a [routerLink]="['/dashboard/listaConcesionarios']">Lista de Concesionarios</a>
+                <a [routerLink]="['/dashboard/AutomovilesRuta']">Automoviles</a>
+                <a [routerLink]="['/dashboard/listaAutomoviles']">Lista de Automoviles</a>
+                <a [routerLink]="['/dashboard/VentaRuta']">Ventas</a>
+                <a [routerLink]="['/dashboard/listaVentas']">Lista de Ventas</a>
+                <a [routerLink]="['/dashboard/RolRuta']">Roles</a>
+                <a [routerLink]="['/dashboard/listaRoles']">Lista de Roles</a>
             </div>
 
         </div>
 
-		<!-- "flex-grow" define la prioridad de crecimiento que tiene 
+		<!-- "flex-grow" define la prioridad de crecimiento que tiene
             el elemento para que abarque todo lo ancho de la pantalla -->
 		<div class="campoDos" style="flex-grow: 1;">
 
             <!-- Llamada de las rutas -->
             <router-outlet></router-outlet>
 
-        </div>
+    </div>
 
 	</div>
 
 </body>
-
-
-<app-footer-component></app-footer-component>

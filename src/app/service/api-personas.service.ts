@@ -16,7 +16,13 @@ export class ApiPersonasService {
 
   getAllPersona():Observable<ResponseI> {
     // console.log("Response: " + this.http.get(urlBase+"/all"));
-    return this.http.get<ResponseI>(urlBase+"/all");
+    return this.http.get<ResponseI>(urlBase+ "/all");
     //return this.http.get<ResponseI>("http://localhost:8080/persona/all");
   }
+
+  postCrearPersona(data: any):Observable<ResponseI> {
+    return this.http.post<ResponseI>(urlBase+ "/crear", data);
+  }
+
+
 }

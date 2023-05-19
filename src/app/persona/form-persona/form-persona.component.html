@@ -1,11 +1,66 @@
 <div class="container">
-    <div>
-        <form id="formulario_Registro" method="POST">
-            <div>
-                <app-titulo-registrar-persona></app-titulo-registrar-persona>
-                <app-menu-persona></app-menu-persona>
-                <app-boton-registrar-persona></app-boton-registrar-persona>
+
+    <form [formGroup]="personaForm"(ngSubmit)="addPersona()" class="containerForm">
+
+        <div class="colorLabel">
+
+            <!-- Titulo "Registrar Personas" -->
+            <div><h3>{{title}}</h3></div>
+
+            <div style="text-align: start;">
+                <!-- PEDIR NOMBRE -->
+                <div class= "row form-group">
+                    <label for = "txtNombre">Nombre*</label>
+                    <input formControlName="nombres" type="text" id="txtNombre" class = "form-control" 
+                    maxlength= "50" minlength= "3" required>
+                </div>
+
+                <!-- PEDIR APELLIDO -->
+                <div class= "row form-group">
+                    <label for = "txtNombre">Apellido*</label>
+                    <input formControlName="apellidos" type="text" id="txtApellido" class = "form-control" maxlength= "50" minlength= "3" required>
+                </div>
+                                
+                <!-- PEDIR CORREO -->
+                <div class = "row form-group">
+                    <label for = "txtCorreo">Correo*</label>
+                    <input formControlName="correos" type="text" id="txtCorreo" class = "form-control" maxlength= "50" minlength= "5" required>
+                </div>
+
+                <!-- PEDIR EDAD -->
+                <div class = "row form-group">
+                    <label for = "txtEdad">Edad*</label>
+                    <input formControlName="edades" type="number" id="txtEdad" class = "form-control" maxlength= "3" minlength= "1" required> 
+                </div>
+
+                <!-- PEDIR FECHA_NACIMIENTO -->
+                <div class = "row form-group">
+                    <label for = "txtFechaNacimiento">Fecha de Nacimiento*</label>
+                    <input formControlName="fecha_nacimientos" type="date" id="txtFechaNacimiento" class = "form-control" required> 
+                </div>
+
+                <!-- PEDIR DIRECCION -->
+                <div class = "row form-group">
+                    <label for = "txtDireccion">Direccion*</label>
+                    <input formControlName="direcciones" type="text" id="txtDireccion" class = "form-control" maxlength= "50" minlength= "5" required>
+                </div>
+
+                <!-- PEDIR CONTRASEÑA -->
+                <div class = "row form-group">
+                    <label for = "txtContrasenia">Contraseña*</label>
+                    <input formControlName="contrasenias" type="text" id="txtContrasenia" class = "form-control" maxlength= "50" minlength= "5" required>
+                </div>
             </div>
-        </form>
-    </div>
+            <hr>
+            
+            <!-- BOTON REGISTRAR -->
+            <div class="definirCentro">
+                <input type="submit" id="btnRegistrar" name="btnRegistrar" 
+                value="Registrar" class="btn btn-dark margen">  
+            </div>
+
+        </div>
+    
+    </form>
+
 </div>

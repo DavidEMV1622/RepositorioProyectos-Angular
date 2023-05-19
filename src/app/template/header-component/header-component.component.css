@@ -1,47 +1,85 @@
-/* clase ".nav" para definir que los links no esten pegados a los 
-bordes de la pagina */
-.nav{
-    text-decoration: none;
-    margin: 5px 10px 5px 10px;
-    padding: 5px 10px 5px 10px;
+/* Contenedor principal */
+.contenedor{
 	
-}
 
-/* clase ".nav a" para definir el formato de separación de cada link */
-.nav a{
-    padding: 5px;
-	/* Cambiar color de URL */
-	color: azure;
-}
+	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+    
+	/*align-items: stretch;*/
+	width: 100vw;
 
-/* Definir separacion entre loss dos botones (INICIAR SESION, REGISTRO) */
-.margen{
-    margin: 5px;
-}
+	height: 20vh;
 
-/* Define el encabezado de la pagina */
-header{
-	/* "padding" define el margen del elemento que esta dentro de la 
-	tabla de abajo hacia arriba */ 
-	padding: 50px;
 	/* "background-color" color del fondo del texto */
 	background-color: #000000;
 	/* "text-align" define la posicion en la que se situa el texto
 	en la tabla */
 	text-align: center;
+}
+
+.img, .container-nav, .logeo {
+	width: 33.33%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img {
+	display: flex;
+	justify-content: flex-start;
+}
+
+
+
+/* clase ".nav" para definir que los links no esten pegados a los 
+bordes de la pagina */
+.nav{
+    text-decoration: none;
+
 	
 }
 
-/* Contenedor principal */
-.contenedor{
-	justify-content: space-between;
+/* clase ".nav a" para definir el formato */
+.nav a{
+    padding: 5px;
+	/* Cambiar color de URL */
+	color: azure;
+	/* Posicion del texto */
+	text-align:center;
+	/* Tipo de letra */
+	font-family: Arial;
+	/* Tamaño de letra */
+	font-size: 18px;
+}
 
-	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
-	display: flex;
+/* "hover" animar cuando coloquemos el cursor sobre el link*/
+.vinculo a:hover {
+	font-family: Arial;
+	font-size: 19px;
+	color: #EEFB03;
+}
 
-	flex-direction: row;
-    
-	/*align-items: stretch;*/
+/* Definir separacion entre los dos botones (INICIAR SESION, REGISTRO) */
+.margen{
+    margin: 5px;
+}
 
-	height: 100%;
+button {
+	font-family: Arial;
+	font-size: 18px;
+	background-color: #1f1f1f;
+	color: azure;
+	border-radius: 20px;
+}
+
+/* "hover" animar cuando coloquemos el cursor sobre el boton*/
+button:hover {
+	font-family: Arial;
+	font-size: 18px;
+	background-color: #EEFB03;
+	color: #000000;
+	border-radius: 20px;
 }

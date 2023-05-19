@@ -1,11 +1,37 @@
 <div class="container">
-    <div>
-        <form id="formulario_Registro" method="POST">
-            <div>
-                <app-titulo-registrar-venta></app-titulo-registrar-venta>
-                <app-menu-venta></app-menu-venta>
-                <app-boton-registrar-venta></app-boton-registrar-venta>
+
+    <form id="formulario_Registro" method="POST" class="containerForm">
+
+        <div class="colorLabel">
+
+            <!-- Titulo "Registrar venta" -->
+            <div><h3>{{title}}</h3></div>
+
+            <div style="text-align: start;">
+
+                <!-- PEDIR FECHA_VENTA -->
+                <div class= "row">
+                    <label for = "txtFechaVenta">Fecha de Venta*</label>
+                    <input type="date" id="txtFechaVenta" name="txtFechaVenta" class = "form-control" required>
+                </div>
+            
+                <!-- PEDIR MONTO_VENTA -->
+                <div class= "row">
+                    <label for = "txtMontoVenta">Monto de Venta*</label>
+                    <input type="number" id="txtMontoVenta" name="txtMontoVenta" class = "form-control" required>
+                </div>
+
             </div>
-        </form>
-    </div>
+            <hr>
+
+            <!-- BOTON REGISTRAR -->
+            <div>
+                <input type="submit" id="btnRegistrar" name="btnRegistrar" 
+                value="Registrar" class="btn btn-dark margen">  
+            </div>
+
+        </div>
+
+    </form>
+
 </div>
