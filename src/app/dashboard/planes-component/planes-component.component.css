@@ -32,8 +32,10 @@
 	width: 27vw;
 	height: 20vh;
 
-	/* "background-color" color del fondo del texto */
-	background-color: #aaff7c;
+	margin-bottom: 20px;
+
+	/* "background-color" color del fondo del texto 
+	background-color: #aaff7c;*/
     /* Cambiar color de texto */
 	color: azure;
 	/* "text-align" define la posicion en la que se situa el texto */
@@ -62,8 +64,8 @@
 	width: 27vw;
 	height: 60vh;
 
-	/* "background-color" color del fondo del texto */
-	background-color: #f58181;
+	/* "background-color" color del fondo del texto 
+	background-color: #f58181;*/
     /* Cambiar color de texto */
 	color: azure;
 	/* "text-align" define la posicion en la que se situa el texto */
@@ -82,8 +84,8 @@
 	width: 27vw;
 	height: 60vh;
 
-	/* "background-color" color del fondo del texto */
-	background-color: #b62496;
+	/* "background-color" color del fondo del texto 
+	background-color: #b62496;*/
     /* Cambiar color de texto */
 	color: azure;
 	/* "text-align" define la posicion en la que se situa el texto */
@@ -102,8 +104,8 @@
 	width: 27vw;
 	height: 60vh;
 
-	/* "background-color" color del fondo del texto */
-	background-color: #81cbf5;
+	/* "background-color" color del fondo del texto 
+	background-color: #81cbf5;*/
     /* Cambiar color de texto */
 	color: azure;
 	/* "text-align" define la posicion en la que se situa el texto */
@@ -120,7 +122,7 @@
 	width: 27vw;
 	height: 10vh;
 
-	background-color: #ff1010;
+	/* background-color: #ff1010; */
 }
 
 .tituloTexto{
@@ -143,7 +145,7 @@
 	height: 28vh;
 	*/
 
-	background-color: #2010ff;
+	/* background-color: #2010ff; */
 }
 
 /* Definir tamaño y diseño de los botones */

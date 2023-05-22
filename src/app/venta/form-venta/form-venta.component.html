@@ -1,6 +1,6 @@
 <div class="container">
 
-    <form id="formulario_Registro" method="POST" class="containerForm">
+    <form [formGroup]="ventaForm" (ngSubmit)="addVenta()" class="containerForm">
 
         <div class="colorLabel">
 
@@ -10,15 +10,15 @@
             <div style="text-align: start;">
 
                 <!-- PEDIR FECHA_VENTA -->
-                <div class= "row">
+                <div class= "row form-group">
                     <label for = "txtFechaVenta">Fecha de Venta*</label>
-                    <input type="date" id="txtFechaVenta" name="txtFechaVenta" class = "form-control" required>
+                    <input formControlName="fecha_ventas" type="date" id="txtFechaVenta" class = "form-control" required>
                 </div>
             
                 <!-- PEDIR MONTO_VENTA -->
-                <div class= "row">
+                <div class= "row form-group">
                     <label for = "txtMontoVenta">Monto de Venta*</label>
-                    <input type="number" id="txtMontoVenta" name="txtMontoVenta" class = "form-control" required>
+                    <input formControlName="monto_ventas" type="number" id="txtMontoVenta" class = "form-control" required>
                 </div>
 
             </div>

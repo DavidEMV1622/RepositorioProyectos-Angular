@@ -21,6 +21,11 @@ import { PlanesComponentComponent } from './dashboard/planes-component/planes-co
 import { ContactoComponentComponent } from './dashboard/contacto-component/contacto-component.component';
 import { PresentacionComponentComponent } from './dashboard/presentacion-component/presentacion-component.component';
 import { InicioComponentComponent } from './dashboard/inicio-component/inicio-component.component';
+import { EditarPersonaComponent } from './persona/editar-persona/editar-persona.component';
+import { EditarAutomovilComponent } from './automovil/editar-automovil/editar-automovil.component';
+import { EditarConcesionarioComponent } from './concesionario/editar-concesionario/editar-concesionario.component';
+import { EditarRolComponent } from './rol/editar-rol/editar-rol.component';
+
 
 // Creacion del objeto con arreglos (componente)
 const routes: Routes = [
@@ -47,9 +52,14 @@ const routes: Routes = [
       { path: 'RolRuta', component: FormRolComponent },
       { path: 'listaRoles', component: RolComponentComponent },
 
+      { path: 'editarPersona/:id', component: EditarPersonaComponent},
+      { path: 'editarAutomovil/:id', component: EditarAutomovilComponent},
+      { path: 'editarConcesionario/:id', component: EditarConcesionarioComponent},
+      { path: 'editarRol/:id', component: EditarRolComponent},
 
     ],
   },
+  { path: 'PersonasHeader', component: FormPersonaComponent },
   { path: 'LoginRuta', component: LoginComponentComponent },
   { path: 'RecuperarCuentaRuta', component: RecuperarCuentaComponentComponent },
   { path: 'PlanesRuta', component: PlanesComponentComponent },

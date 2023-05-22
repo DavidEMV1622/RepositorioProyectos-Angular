@@ -19,4 +19,9 @@ export class ApiVentasService {
     return this.http.get<ResponseI>(urlBase+"/all");
     //return this.http.get<ResponseI>("http://localhost:8080/venta/all");
   }
+  
+  // Definir el metodo para crear
+  postCrearVenta(data: any):Observable<ResponseI> {
+    return this.http.post<ResponseI>(urlBase+ "/crear", data);
+  }
 }

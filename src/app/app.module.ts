@@ -5,18 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FormPersonaComponent } from './persona/form-persona/form-persona.component';
 import { FormConcesionarioComponent } from './concesionario/form-concesionario/form-concesionario.component';
-import { TituloRegistrarConcesionarioComponent } from './concesionario/titulo-registrar-concesionario/titulo-registrar-concesionario.component';
-import { BotonRegistrarConcesionarioComponent } from './concesionario/boton-registrar-concesionario/boton-registrar-concesionario.component';
-import { MenuConcesionarioComponent } from './concesionario/menu-concesionario/menu-concesionario.component';
 import { FormAutomovilComponent } from './automovil/form-automovil/form-automovil.component';
 import { FormVentaComponent } from './venta/form-venta/form-venta.component';
-import { MenuVentaComponent } from './venta/menu-venta/menu-venta.component';
-import { TituloRegistrarVentaComponent } from './venta/titulo-registrar-venta/titulo-registrar-venta.component';
-import { BotonRegistrarVentaComponent } from './venta/boton-registrar-venta/boton-registrar-venta.component';
 import { FormRolComponent } from './rol/form-rol/form-rol.component';
-import { MenuRolComponent } from './rol/menu-rol/menu-rol.component';
-import { TituloRegistrarRolComponent } from './rol/titulo-registrar-rol/titulo-registrar-rol.component';
-import { BotonRegistrarRolComponent } from './rol/boton-registrar-rol/boton-registrar-rol.component';
 import { MenuComponentComponent } from './template/menu-component/menu-component.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PersonaComponentComponent } from './persona/persona-component/persona-component.component';
@@ -37,24 +28,20 @@ import { LoginComponentComponent } from './dashboard/login-component/login-compo
 import { RecuperarCuentaComponentComponent } from './dashboard/recuperar-cuenta-component/recuperar-cuenta-component.component';
 import { PlanesComponentComponent } from './dashboard/planes-component/planes-component.component';
 import { ContactoComponentComponent } from './dashboard/contacto-component/contacto-component.component';
+import { EditarPersonaComponent } from './persona/editar-persona/editar-persona.component';
+import { ApiRolService } from './service/api-rol.service';
+import { EditarAutomovilComponent } from './automovil/editar-automovil/editar-automovil.component';
+import { EditarConcesionarioComponent } from './concesionario/editar-concesionario/editar-concesionario.component';
+import { EditarRolComponent } from './rol/editar-rol/editar-rol.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormPersonaComponent,
     FormConcesionarioComponent,
-    TituloRegistrarConcesionarioComponent,
-    BotonRegistrarConcesionarioComponent,
-    MenuConcesionarioComponent,
     FormAutomovilComponent,
     FormVentaComponent,
-    MenuVentaComponent,
-    TituloRegistrarVentaComponent,
-    BotonRegistrarVentaComponent,
     FormRolComponent,
-    MenuRolComponent,
-    TituloRegistrarRolComponent,
-    BotonRegistrarRolComponent,
     MenuComponentComponent,
     PersonaComponentComponent,
     ConcesionarioComponentComponent,
@@ -68,7 +55,11 @@ import { ContactoComponentComponent } from './dashboard/contacto-component/conta
     LoginComponentComponent,
     RecuperarCuentaComponentComponent,
     PlanesComponentComponent,
-    ContactoComponentComponent
+    ContactoComponentComponent,
+    EditarPersonaComponent,
+    EditarAutomovilComponent,
+    EditarConcesionarioComponent,
+    EditarRolComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +69,7 @@ import { ContactoComponentComponent } from './dashboard/contacto-component/conta
     FormsModule
   ],
   providers: [ApiPersonasService, ApiConcesionariosService, ApiAutomovilesService,
-    ApiVentasService],
+    ApiVentasService, ApiRolService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

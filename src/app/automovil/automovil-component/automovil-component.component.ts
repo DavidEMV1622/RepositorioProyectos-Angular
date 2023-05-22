@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Automovil } from 'src/app/model/Automovil';
 import { ApiAutomovilesService } from 'src/app/service/api-automoviles.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-automovil-component',
@@ -18,6 +19,8 @@ export class AutomovilComponentComponent implements OnInit{
   constructor(private automovilService: ApiAutomovilesService) {
 
   }
+  // Inicializar el id para el metodo de eliminar
+  id:number=0;
 
   ngOnInit(): void {
     this.allAutomovil();
@@ -39,5 +42,37 @@ export class AutomovilComponentComponent implements OnInit{
 
     })
     
+  }
+
+  // Definir los parametros para eliminar
+  delete(id:number):void{
+    this.id=id
+    this.confirmar()
+   }
+
+  // Ventana para confirmar si se desea eliminar
+  confirmar():void{
+    Swal.fire({
+      title: "Automovil",
+      text: "¿Deseas eliminar el automovil?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: "Sí, eliminar",
+      cancelButtonText: "Cancelar",
+  })
+
+  // Que pasa si se le da a las botones "Si, eliminar" y "Cancelar"
+  .then((resultado) => {
+      if (resultado.value) {
+          // Hicieron click en "Sí"
+          this.automovilService.getEliminarAutomovil(this.id).subscribe(respuesta =>{
+            console.log("++++++",respuesta);
+          });
+          console.log("*Se elimina el cliente*");
+      } else  if (resultado.dismiss === Swal.DismissReason.cancel) {
+          // Dijeron que no
+          console.log("*NO se elimina el cliente*");
+      }
+  });
   }
 }

@@ -56,6 +56,28 @@ img{
 	font-size: 20px;
 }
 
+/* Definir tamaño y diseño de los botones */
+button {
+	font-family: Arial;
+	font-size: 16px;
+	background-color: #1f1f1f;
+	color: azure;
+	border-radius: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+/* "hover" animar cuando coloquemos el cursor sobre el boton*/
+button:hover {
+	font-family: Arial;
+	font-size: 16px;
+	background-color: #EEFB03;
+	color: #000000;
+	border-radius: 20px;
+}
+
 h2 {
 	text-align: center;
 }

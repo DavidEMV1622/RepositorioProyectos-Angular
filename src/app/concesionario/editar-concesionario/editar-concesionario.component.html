@@ -1,6 +1,6 @@
 <div class="container">
 
-    <form [formGroup]="concesionarioForm" (ngSubmit)="addConcesionario()" class="containerForm">
+    <form [formGroup]="concesionarioForm" (ngSubmit)="updateConcesionario()" class="containerForm">
 
         <div class="colorLabel">
 
@@ -8,6 +8,14 @@
             <div><h3>{{title}}</h3></div>
 
             <div style="text-align: start;">
+
+                <!-- Id -->
+                <div class= "row form-group">
+                    <label for = "txtId_concesionario">ID del cliente</label>
+                    <input formControlName="id_concesionario" type="number" id="txtId_concesionario" class = "form-control" 
+                    maxlength= "50" minlength= "3" required>
+                </div>
+
                 <!-- PEDIR NOMBRE -->
                 <div class= "row">
                     <label for = "txtNombre">Nombre*</label>
@@ -39,11 +47,12 @@
             </div>
             <hr>
 
-            <!-- BOTON REGISTRAR -->
+            <!-- BOTON ACTUALIZAR -->
             <div class="definirCentro">
-                <input type="submit" id="btnRegistrar" name="btnRegistrar" 
-                value="Registrar" class="btn btn-dark margen">  
+                <input type="submit" id="btnActualizar" name="btnActualizar" 
+                value="Actualizar" class="btn btn-dark margen">  
             </div>
+
             
         </div>
 

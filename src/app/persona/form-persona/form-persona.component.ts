@@ -1,6 +1,4 @@
-import { HttpClient } from '@angular/common/http';
 import { ApiPersonasService } from 'src/app/service/api-personas.service';
-import { Persona } from 'src/app/model/Persona';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -32,27 +30,27 @@ export class FormPersonaComponent implements OnInit {
   }
 
   addPersona(): void{
-  let persona = {
-    id_persona: this.personaForm.get('id_persona')?.value,
-    nombres: this.personaForm.get('nombres')?.value,
-    apellidos: this.personaForm.get('apellidos')?.value,
-    correos: this.personaForm.get('correos')?.value,
-    edades: this.personaForm.get('edades')?.value,
-    fecha_nacimientos: this.personaForm.get('fecha_nacimientos')?.value,
-    direcciones: this.personaForm.get('direcciones')?.value,
-    contrasenias: this.personaForm.get('contrasenias')?.value
-  }
-  this.api.postCrearPersona(persona).subscribe (respuesta => {
-    console.log("@@@@@@@ ", respuesta);
-
-    if (respuesta.status === "ok") {
-      alert ("Registro exitoso");
-      this.router.navigate(['tablaPersona']);
-    
-    } else {
-      alert("Registro fallido")
+    let persona = {
+      id_persona: this.personaForm.get('id_persona')?.value,
+      nombres: this.personaForm.get('nombres')?.value,
+      apellidos: this.personaForm.get('apellidos')?.value,
+      correos: this.personaForm.get('correos')?.value,
+      edades: this.personaForm.get('edades')?.value,
+      fecha_nacimientos: this.personaForm.get('fecha_nacimientos')?.value,
+      direcciones: this.personaForm.get('direcciones')?.value,
+      contrasenias: this.personaForm.get('contrasenias')?.value
     }
-  });
+    this.api.postCrearPersona(persona).subscribe (respuesta => {
+      console.log("@@@@@@@ ", respuesta);
+
+      if (respuesta.status === "ok") {
+        alert ("Registro exitoso");
+        this.router.navigate(['tablaPersona']);
+      
+      } else {
+        alert("Registro fallido")
+      }
+    });
   }
 
 

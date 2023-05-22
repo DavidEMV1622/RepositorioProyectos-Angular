@@ -1,5 +1,5 @@
 <div class="container">
-    <h3 class="text-bg-dark">Lista Roles</h3>
+    <div class="text-bg-dark"><h3>{{title}}</h3></div>
     <div>
         <table class="table table-striped table-dark table-bordered">
             <!--7.5) Encabezado de la tabla-->
@@ -15,14 +15,24 @@
                 crea una variable "rol" (singular) para buscarla en la "listRoles"-->
                 <tr *ngFor="let rol of listRoles">
                     <td>{{rol.id_rol}}</td>
-                    <td>{{rol.nombre}}</td>
+                    <td>{{rol.nombres}}</td>
                     <td>
-                        <button type="button" class="btn btn-primary margen">Editar</button>
-                        <button type="button" class="btn btn-danger margen">Eliminar</button>
+                        <!-- Llamado del formulario "editarPersona" y se muestra el id de la persona a editar en la URL -->
+                        <a [routerLink]="['/dashboard/editarRol', rol.id_rol]">
+                            <button type="button" class="btn btn-primary margen">Editar</button>
+                        </a>
+                        <!--  (click)="delete(rol.id_rol)" se para dar una accion al boton para eliminar-->
+                        <button type="button" (click)="delete(rol.id_rol)" class="btn btn-danger margen">Eliminar</button>
                     </td>
                 </tr>
             </tbody>
         </table>
+
+        <!-- Condición si hay (muestre los datos) o no hay ("No hay Registros") datos -->
+        <div *ngIf = "show" class="p-3 mb-2 bg-danger text-white">
+            <h5>No hay Registros</h5>
+        </div>
+
     </div>
 
 </div>

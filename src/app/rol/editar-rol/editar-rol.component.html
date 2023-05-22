@@ -1,14 +1,21 @@
 <div class="container">
 
-    <form [formGroup]="rolForm" (ngSubmit)="addRol()" class="containerForm">
+    <form [formGroup]="rolForm" (ngSubmit)="updateRol()" class="containerForm">
 
         <div class="colorLabel">
 
-            <!-- Titulo "Registrar Personas" -->
+            
             <div><h3>{{title}}</h3></div>
 
+            
+            <div class= "row form-group">
+                <label for = "txtId_rol">ID del rol</label>
+                <input formControlName="id_rol" type="number" id="txtId_rol" class = "form-control" 
+                maxlength= "50" minlength= "3" required>
+            </div>
+
             <div style="text-align: start;">
-                <!-- PEDIR NOMBRE -->
+                
                 <div class= "row form-group">
                     <label for = "txtNombre">Nombre*</label>
                     <input formControlName="nombres" type="text" id="txtNombre" class = "form-control" maxlength= "50" minlength= "3" required>
@@ -16,10 +23,10 @@
             </div>         
             <hr>
 
-            <!-- BOTON REGISTRAR -->
+            
             <div class="definirCentro">
-                <input type="submit" id="btnRegistrar" name="btnRegistrar" 
-                value="Registrar" class="btn btn-dark margen">  
+                <input type="submit" id="btnActualizar" name="btnActualizar" 
+                value="Actualizar" class="btn btn-dark margen">  
             </div>
             
         </div>

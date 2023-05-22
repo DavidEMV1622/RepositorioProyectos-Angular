@@ -9,9 +9,6 @@
 	width: 100vw;
 	height: 100vh;
 
-    background: url("../../../assets/imagenes/login/Fondo.png") no-repeat center center; 
-    background-size: cover;
-    height: 800px;
     text-align: center; 
 }
 
@@ -22,9 +19,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	width: 40%;
-	height: 70%;
+    
+	width: 30vw;
+	height: 100vh;
 
 	/* "background-color" color del fondo del texto */
 	background-color: #000000;
@@ -32,20 +29,6 @@
 	color: azure;
 	/* "text-align" define la posicion en la que se situa el texto */
 	text-align: center;
-}
-
-
-/* Disposicion de los links */
-nav{
-	
-	/* "display" indicar que es un modelo de caja flexible *//* "contenedor" clase para usar los Flexbox */
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
-/*    
-	width: 100vw;
-	height: 100vh;
-*/
 }
 
 .imputTamaño {

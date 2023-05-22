@@ -35,8 +35,11 @@
                     <td>{{automovil.cap_personas}}</td>
                     <td>{{automovil.precios}}</td>
                     <td>
-                        <button type="button" class="btn btn-primary margen">Editar</button>
-                        <button type="button" class="btn btn-danger margen">Eliminar</button>
+                        <!-- Llamado del formulario "editarAutomovil" y se muestra el id de la persona a editar en la URL -->
+                        <a [routerLink]="['/dashboard/editarAutomovil', automovil.id_automovil]">
+                            <button type="button" class="btn btn-primary margen">Editar</button>
+                        </a>
+                        <button type="button" (click)="delete(automovil.id_automovil)" class="btn btn-danger margen">Eliminar</button>
                     </td>
                 </tr>
             </tbody>

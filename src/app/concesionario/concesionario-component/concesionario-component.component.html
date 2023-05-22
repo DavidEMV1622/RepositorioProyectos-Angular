@@ -23,8 +23,11 @@
                     <td>{{concesionario.correos}}</td>
                     <td>{{concesionario.telefonos}}</td>
                     <td>
-                        <button type="button" class="btn btn-primary margen">Editar</button>
-                        <button type="button" class="btn btn-danger margen">Eliminar</button>
+                        <!-- Llamado del formulario "editarConcesionario" y se muestra el id de la persona a editar en la URL -->
+                        <a [routerLink]="['/dashboard/editarConcesionario', concesionario.id_concesionario]">
+                            <button type="button" class="btn btn-primary margen">Editar</button>
+                        </a>
+                        <button type="button" (click)="delete(concesionario.id_concesionario)" class="btn btn-danger margen">Eliminar</button>
                     </td>
                 </tr>
             </tbody>

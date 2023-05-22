@@ -33,8 +33,14 @@
                     <td>{{persona.direcciones}}</td>
                     <td>{{persona.contrasenias}}</td>
                     <td>
-                        <button type="button" class="btn btn-primary margen">Editar</button>
-                        <button type="button" class="btn btn-danger margen">Eliminar</button>
+                        
+                        <!-- Llamado del formulario "editarPersona" y se muestra el id de la persona a editar en la URL -->
+                        <a [routerLink]="['/dashboard/editarPersona', persona.id_persona]">
+                            <button type="button" class="btn btn-primary margen">Editar</button>
+                        </a>
+                        
+                        <!--  (click)="delete(rol.id_rol)" se para dar una accion al boton para eliminar-->
+                        <button type="button" (click)="delete(persona.id_persona)" class="btn btn-danger margen">Eliminar</button>
                     </td>
                 </tr>
             </tbody>

@@ -19,4 +19,22 @@ export class ApiConcesionariosService {
     return this.http.get<ResponseI>(urlBase+"/all");
     //return this.http.get<ResponseI>("http://localhost:8080/concesionario/all");
   }
+
+  // Definir el metodo para crear
+  postCrearConcesionario(data: any):Observable<ResponseI> {
+    return this.http.post<ResponseI>(urlBase+ "/crear", data);
+  }
+
+  // Definir el metodo para actualizar
+  postActualizarConcesionario(data: any):Observable<ResponseI> {
+    return this.http.post<ResponseI>(urlBase+ "/actualizar", data);
+  }
+
+  // Definir el metodo para eliminar
+  getEliminarConcesionario(data:number):Observable<Response>{
+    console.log("###### ",data);
+
+    return this.http.get<Response>(urlBase+"/eliminar/"+data);
+  }
+
 }

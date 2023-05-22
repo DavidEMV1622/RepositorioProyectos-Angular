@@ -2,7 +2,7 @@
 
     <!-- "formGroup" define el formulario para crear un dato -->
     <!-- "ngSubmit" llama al boton para registrar un dato -->
-    <form [formGroup]="personaForm" (ngSubmit)="addPersona()" class="containerForm">
+    <form [formGroup]="personaForm" (ngSubmit)="updatePersona()" class="containerForm">
 
         <div class="colorLabel">
 
@@ -10,6 +10,13 @@
             <div><h3>{{title}}</h3></div>
 
             <div style="text-align: start;">
+
+                <!-- Id -->
+                <div class= "row form-group">
+                    <label for = "txtId_persona">ID del cliente</label>
+                    <input formControlName="id_persona" type="number" id="txtId_persona" class = "form-control" 
+                    maxlength= "50" value="listPersonas.id" minlength= "3" required>
+                </div>
 
                 <!-- PEDIR NOMBRE -->
                 <!-- "formControlName" define el nombre de cada input para utilizarlo
@@ -58,10 +65,10 @@
             </div>
             <hr>
             
-            <!-- BOTON REGISTRAR -->
+            <!-- BOTON ACTUALIZAR -->
             <div class="definirCentro">
-                <input type="submit" id="btnRegistrar" name="btnRegistrar" 
-                value="Registrar" class="btn btn-dark margen">  
+                <input type="submit" id="btnActualizar" name="btnActualizar" 
+                value="Actualizar" class="btn btn-dark margen">  
             </div>
 
         </div>
